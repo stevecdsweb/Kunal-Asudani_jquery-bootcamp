@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+    $("#h3").mouseup(function() {
+        alert("This is a mouseup");
+        $("div").text("This is the mouseup event taking place").show().fadeOut(4000);
+    });
+});
+        
+</script>
+</head>
+<body>
+
+
+<h3 id="h3"> This is a top course on jquery</h3>
+<div></div>
+
+
+</body>
+</html>

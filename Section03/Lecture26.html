@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    div{
+        color : #00C;
+    }
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<select id="abc" name="def">
+<option> C</option>
+<option selected="selected"> Java</option>
+<option> Python</option>
+<option> jQuery</option>
+</select>
+
+<div id="xyz">
+</div>
+
+<script>
+    
+$("select").change(function(){
+    document.getElementById("xyz").innerHTML="Your selection:"+ document.getElementById("abc").value;
+});
+
+
+</script>
+
+</body>
+</html>

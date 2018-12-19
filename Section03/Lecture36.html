@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+    $("#p").mousedown(function() {
+        alert("mousedown event");
+        $("div").text("here is the mouse down occurs").show().fadeOut(1000);
+    });
+});
+        
+</script>
+</head>
+<body>
+
+
+<p id="p"> Enter when come on this heading</p>
+<div></div>
+
+
+</body>
+</html>

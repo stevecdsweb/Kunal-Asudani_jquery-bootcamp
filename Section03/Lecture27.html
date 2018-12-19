@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <style>
+    div{
+        color : #F00;
+    }
+
+    </style>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+
+<select name="abc"  multiple="multiple">
+<option> C</option>
+<option selected="selected"> C++</option>
+<option selected="selected"> Java</option>
+<option> Python</option>
+<option> Ruby</option>
+</select>
+
+<div> </div>
+
+<script>
+    
+$("select").change(function(){
+    var str="";
+    $("select option:selected").each(function(){
+        str+=$(this).text()+"";
+    });
+    $("div").text(str);
+    console.log(str);
+})
+.change();
+
+
+
+</script>
+
+</body>
+</html>

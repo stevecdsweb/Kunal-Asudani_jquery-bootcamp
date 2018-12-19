@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    div{
+        color : red;
+    }
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<input type="text" value="hello this is a course">
+
+<input type="text" value="Hi i am your instructor"></p>
+
+<div> </div>
+
+<script>
+    
+$(":input").select(function(){
+    $("div").text("You have selected some text from here").show().fadeOut(1000);
+});
+
+
+</script>
+
+</body>
+</html>

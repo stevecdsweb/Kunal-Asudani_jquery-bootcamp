@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    span{
+        color: #00F;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+
+<form action="javascript:alert('successful submission')">;
+<div>
+
+<input type="text">
+<input type="submit">
+
+</div>
+</form>
+
+<span> </span>
+
+<script>
+    
+$("form").submit(function(event) {
+    if($("input:first").val()==="jquery")
+    {
+        $("span").text("You have submitted successfully").show();
+        return;
+    }
+    $("span").text("Not valid text").show().fadeOut(1000);
+    event.preventDefault();
+});
+
+
+</script>
+
+</body>
+</html>

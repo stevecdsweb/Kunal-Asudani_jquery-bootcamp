@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+    
+    div.outer{
+        width:80%;
+        height:180px;
+        background-color:#FF0;
+    }
+
+    div.inner{
+        width:50%;
+        height:130px;
+        background-color:#090;
+    }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<div class="outer">
+<span> This is a mouseover event</span>
+</div>
+<div class="inner"></div>
+
+<script>
+
+$("div.outer").mouseover(function() {
+    $(this).find("span").text("event occured");
+})
+.mouseout(function() {
+    $(this).find("span").text("mouseout event");
+});
+                
+</script>
+</body>
+</html>
