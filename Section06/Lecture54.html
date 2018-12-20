@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+</head>
+
+<body>
+<div id="div1" style="border:#F0F 2px solid; height:100px; background-color:#9F0; font-size: 24px">
+    <span> Click me, to find the value of the current option</span>
+</div>
+<script>
+    $(" #div1 span").draggable();
+    $( "#div1 span").bind('click' , function(event) {
+        var cursor = $(" #div1 span").draggable("option" , "cursor" );
+        var cursorAt = $( "#div1 span").draggable("option" , "cursorAt");
+        alert("Cursor At-" +cursor+ ", Cursor-" +cursorAt);
+    });                   
+</script> 
+</body>
+</html>

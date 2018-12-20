@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+</head>
+
+<body>
+<div id="div1" style="border:2px solid #F00; height:45px; background-color:#00F">
+    <span> Hello, just drag me, see, i can be duplicated</span>
+</div>
+<script>
+    $("#div1 span").draggable(
+        { helper : "clone"
+        });                   
+    </script>
+</body>
+</html>

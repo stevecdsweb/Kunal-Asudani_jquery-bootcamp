@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Droppable</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #dragg-1 {
+            width:150px; height:95px; padding:0.5em; margin:0px 5px 10px 0px;
+        }
+        #drop-1, #drop-2, #drop-3, #drop-4 {
+            width:150px; height:100px; float:left; padding:0.5em; margin:10px;
+        }
+    </style>
+    <script>
+        $( function() {$("#dragg-1").draggable();
+            $("#drop-1").droppable( {
+                drop : function(event,ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("p")
+                    .html("dropped");
+                }
+            });
+            $("#drop-2").droppable( {
+                disabled : "true",
+                drop : function(event,ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("p")
+                    .html("dropped");
+                }
+            });
+            $("#drop-3").droppable( {
+                tolerance : 'touch',
+                drop : function(event,ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("p")
+                    .html("dropped");
+                }
+            });
+            $("#drop-4").droppable( {
+                tolerance : 'fit',
+                drop : function(event,ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("p")
+                    .html("dropped");
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="dragg-1" class="ui-widget-content">
+    <p> Hey, drag me to the target option</p>
+</div>
+<div id="drop-1" class="ui-widget-content">
+    <p> Drop me please, i am a normal droppable</p>
+</div>
+<div id="drop-2" class="ui-widget-content">
+    <p> Sorry, i am disabled</p>
+</div>
+<div id="drop-3" class="ui-widget-content">
+    <p>i am a touched tolerance, please just have a touch and i will be dropped</p>
+</div>
+<div id="drop-4" class="ui-widget-content">
+    <p>i am a tolerance fit, please move object on me completely then i will accept</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+</head>
+
+<body>
+<div id="div1" style="border:2px solid;  background-color:#9FF; font-size: 24px">
+    <span> Hello, i cannot be moved, because i am disabled</span>
+</div>
+<div id="div2" style="border:solid 2px;  background-color:#6FF; font-size: 24px">
+    <span> Hello, i can be easily moved.</span>
+</div>
+<script>
+    $("#div1 span").draggable();
+    $("#div1 span").draggable('disable');
+    $("#div2 span").draggable();
+    $("#div2 span").draggable('enable');
+</script>
+</body>
+</html>

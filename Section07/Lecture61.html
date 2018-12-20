@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Events in jquery ui droppable method</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style type="text/css">
+        #droppable-1 {
+            width:160px; height:105px; padding:0.5em; margin:0px 5px 10px 0px; float:left; background-color:#999;
+        }
+        #draggable-1 {
+            width:100px; height:85px; padding:0.5em; margin:0px 5px 10px 0px; float:left; background-color:#0FF;
+        }
+
+    </style>
+    <script> 
+        $( function() {
+            $("#draggable-1").draggable();
+            $("#droppable-1").droppable({
+                drop:function(event,ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("span")
+                    .html("I am dropped")
+                },
+                over:function(event, ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("span")
+                    .html("I am moving in")
+                },
+                out:function(event, ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("span")
+                    .html("I am moving out")
+                },
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="draggable-1">
+    <span> Please drag me to my target</span>
+</div>
+<div id="droppable-1">
+    <span> I am the target, drop on me</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Active and scope in draggable</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #cricketer, #footballer, #tennisplayer, #chessplayer {
+            width:150px; height:100px; padding:0.5em; margin:0px 5px 10px 0px; float:left;
+        }
+        #cricket, #football, #tennis, #chess {
+            width:100px; height:80px; padding:0.5em; margin:10px; float:left;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#cricket").draggable();
+            $("#football").draggable();
+            $("#cricketer").droppable({
+                accept : "#cricket",
+                drop:function(event, ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("p")
+                    .html("I am dropped now")
+                }
+            });
+            $("#footballer").droppable({
+                accept : "#football",
+                drop:function(event, ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("p")
+                    .html("I am dropped now")
+                }
+            });
+
+            $("#tennis").draggable({scope:"tennisplayer"});
+            $("#chess").draggable({scope:"chessplayer"});
+            $("#tennisplayer").droppable({
+                scope:"tennisplayer",
+                drop:function(event, ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("p")
+                    .html("I am dropped now")
+                }
+            });
+            $("#chessplayer").droppable({
+                scope:"chessplayer",
+                drop:function(event, ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("p")
+                    .html("I am dropped now")
+                }
+            });
+            
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="cricketer" class="ui-widget-header">
+    <p> This space is reserved for cricketers</p>
+</div>
+<div id="footballer" class="ui-widget-header">
+    <p> This space is reserved for footballers</p>
+</div>
+<div id="cricket" class="ui-widget-content">
+    <p>I am a cricketer</p>
+</div>
+<div id="football" class="ui-widget-content">
+    <p>I am a footballer</p>
+</div>
+<div id="tennisplayer" class="ui-widget-header">
+    <p> This space is reserved for tennis</p>
+</div>
+<div id="chessplayer" class="ui-widget-header">
+    <p>This space is reserved for chess</p>
+</div>
+<div id="tennis" class="ui-widget-content">
+    <p>I sm a tennis player</p>
+</div>
+<div id="chess" class="ui-widget-content">
+    <p>I am a chess player</p>
+</div>
+
+</body>
+</html>

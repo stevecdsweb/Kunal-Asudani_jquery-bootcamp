@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Destroy in droppable</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style type="text/css">
+        .droppable-1 {
+            width:150px; height:100px; padding:0.5em; margin:0px 5px 10px 0px; float:left; background-color:#9F0;
+        }
+        .draggable-1 {
+            width:100px; height:90px; padding:0.5em; margin:0px 5px 10px 0px; float:left; background-color:#FF9;
+        }
+        .droppable.active {
+            background-color:#0FF;
+        }
+    </style>
+    <script> 
+        $( function() {
+            $(".draggable-1").draggable();
+            $(".droppable-1").droppable({
+                hoverClass:'active',
+                drop:function(event, ui){
+                    $(this).html(ui.draggable.remove().html());
+                    $(this).droppable('destroy');
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("p")
+                    .html("I am destroyed");
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+<div class="draggable-1">
+    <p> I am the first one</p>
+</div>
+<div class="draggable-1">
+    <p> I am the second one</p>
+</div>
+<div class="draggable-1">
+    <p> I am the third one</p>
+</div>
+<div style="clear:both; padding:10px;">
+</div>
+<div class="droppable-1">
+    <p> Please drop here</p>
+</div>
+<div class="droppable-1">
+    <p> Please drop here</p>
+</div>
+<div class="droppable-1">
+    <p> Please drop here</p>
+</div>
+</body>
+</html>

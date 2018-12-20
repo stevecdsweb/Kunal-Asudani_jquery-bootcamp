@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Droppable</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #dragg-1 {
+            width:150px; height:100px; padding:0.5em; float:left; margin:20px 8px 10px 0px;
+            
+        }
+        #drop-1 {
+            width:180px; height:200px; padding:0.5em; margin:10px;
+            background-color:orange;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#dragg-1").draggable();
+            $("#drop-1").droppable();
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="dragg-1" class="ui-widget-content">
+    <p> Hello, i am john<br/>Please drop me</p>
+</div>
+<div id="drop-1" class="ui-widget-content">
+    <p> Thank you for dropping</p>
+</div>
+
+</body>
+</html>

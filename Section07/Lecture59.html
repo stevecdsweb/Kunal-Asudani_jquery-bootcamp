@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Active class and hover functionality</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style type="text/css">
+        #drop-1 {
+            width:150px; height:100px; padding:0.5em; margin:0px 5px 10px 0px; float:left;
+        }
+        #dragg-1 {
+            width:100px; height:80px; padding:0.5em; margin:10px; float:left;
+        }
+        .active {
+            border-color:#F00;
+            background:#9CC;
+        }
+        .hover {
+            border-color:#00F;
+            background:#0Fc;
+        }
+    </style>
+    <script type="text/javascript"> 
+        $(function(){
+            $("#dragg-1").draggable();
+            $("#drop-1").droppable({
+                activeClass:"active",
+                hoverClass:"hover",
+                drop:function(event, ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("p")
+                    .html("Hello, i am dropped to my tartget location")
+                }
+            });
+            
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="dragg-1" class="ui-widget-content">
+    <p> Drag me to my target</p>
+</div>
+<div id="drop-1" class="ui-widget-header">
+    <p> Please hover me or drop me</p>
+</div>
+
+</body>
+</html>
