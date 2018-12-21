@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use of delay, distance and autohide methods</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+    .ui-widget-header {
+        background-color:#9F3;
+        border:solid 2px #000;
+        font-size:14px;
+        color:#F00;
+    }
+    .ui-widget-content {
+        background-color:#FF0;
+        border:solid 2px #F00;
+        color:#0F0;
+    }
+    .square {
+        width:120px;
+        height:120px;
+        margin:30px;
+        border:solid 2px #00F;
+        float:left;
+    }
+    </style>
+    <script>
+    $(function() {
+        $("#resize-1").resizable({
+            delay:500
+        });
+        $("#resize-2").resizable({
+            distance:30
+        });
+        $("#resize-3").resizable({
+            autoHide:true
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="resize-1" class="square ui-widget-content">
+        <h1 class="ui-widget-header">
+            Yes, i can be resized but after a delay of 500ms
+        </h1>
+    </div>
+    <div id="resize-2" class="square ui-widget-content">
+        <h1 class="ui-widget-header">
+            Yes, i can be resized but after a distance of 30px
+        </h1>
+    </div>
+    <div id="resize-3" class="square ui-widget-content">
+        <h1 class="ui-widget-header">
+             Yes, i can be resized but you have to hover
+        </h1>
+    </div>
+</body>
+</html>

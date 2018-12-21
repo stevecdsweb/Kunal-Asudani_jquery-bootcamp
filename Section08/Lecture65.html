@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>alsoResize method</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+    .ui-widget-header {
+        background-color:#0FF;
+        border:solid 2px #000;
+        color:#F00;
+    }
+    .ui-widget-content {
+        background-color:#93C;
+        border:solid 2px #000;
+        color:#F00;
+    }
+    #resize-1, #resize-2 {
+        width:100px; height:100px; padding:0.5em;
+    }
+    </style>
+    <script>
+    $(function() {
+        $("#resize-1").resizable({
+            alsoResize:"#resize-2"
+        });
+        $("#resize-2").resizable();
+    });
+    </script>
+</head>
+<body>
+    <div id="resize-1" class="ui-widget-content">
+        <h2 class="ui-widget-header">
+            Please resize me
+        </h2>
+    </div>
+    <div id="resize-2" class="ui-widget-content">
+        <h2 class="ui-widget-header">
+            I will also get resized
+        </h2>
+    </div>
+</body>
+</html>

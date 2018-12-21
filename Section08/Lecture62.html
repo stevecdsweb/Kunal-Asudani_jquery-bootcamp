@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic resizable program</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+    .ui-widget-header {
+        font-family:'Courier New', Courier, monospace;
+        font-size:12px;
+        background-color:#FFC;
+        border:solid 1px #000;
+    }
+    .ui-widget-content {
+        background-color:#9F0;
+        border:solid 2px #060;
+    }
+    #resizable {
+        width: 100px; height: 150px; padding: 0.5em;
+    }
+    </style>
+    <script>
+    $(function() {
+        $("#resizable").resizable();
+    });
+    </script>
+</head>
+<body>
+    <div id="resizable" class="ui-widget-content">
+        <h2 class="ui-widget-header">
+            <span>Please drag me and i will resize</span>
+        </h2>
+    </div>
+</body>
+</html>

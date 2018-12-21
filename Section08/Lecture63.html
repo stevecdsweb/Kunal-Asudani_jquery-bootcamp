@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic resizable program</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+    .ui-widget-header {
+        background-color:#0FF;
+        color:#000;
+        border:solid 3px #000;
+        font-size:14px;
+    }
+    .ui-widget-content {
+        background-color:#969;
+        border:solid 2px #036;
+        color:#000;
+    }
+    #resize-1 {
+        width: 100%; height: 80px; padding: 0.5em;
+    }
+    #resize-2 {
+        width: 10%; height: 100px; padding: 0.5em;
+    }
+    </style>
+    <script>
+    $(function() {
+        $("#resize-1").resizable({
+            animate:true
+        });
+        $("#resize-2").resizable({
+            ghost:true
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="resize-1" class="ui-widget-content">
+        <h1 class="ui-widget-header">
+            I AM ANIMATED, YOU CAN PULL MY EDGES TO SEE THE ANIMATION
+        </h1>
+    </div>
+    <div id="resize-2" class="ui-widget-content">
+        <h1 class="ui-widget-header">
+            I am a ghost, i can also get resized
+        </h1>
+    </div>
+</body>
+</html>
