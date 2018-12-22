@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selectable</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #selectable-1 .ui-selecting {background:#0F0;}
+        #selectable-1 .ui-selected {background:#FF0; color:#093;}
+        #selectable-1 {list-style-type:none; width:20%; margin:0px; padding:0px;}
+        #selectable-1 li {margin:4px; padding:0.4em; height:20px;}
+        .ui-widget-content {background:#06F; border:#903 2px solid; color:#F00;}
+        .selectedoption {background:#FFC; border:#0FC 2px solid;font-size:18px;}
+    </style>
+    <script>
+    $(function() {
+        $("#selectable-1").selectable({
+            selected : function(){
+                var select = $("#select").empty();
+                $(".ui-selected", this).each(function(){
+                    var index = $("#selectable-1 li").index(this);
+                    select.append("#" +(index + 1));
+                });
+            }
+        });
+    });
+    </script> 
+</head>
+<body>
+    <h1>Events with selectable methods</h1>
+    <ul id="selectable-1">
+        <li class="ui-widget-content">Course 1</li>
+        <li class="ui-widget-content">Course 2</li>
+        <li class="ui-widget-content">Course 3</li>
+        <li class="ui-widget-content">Course 4</li>
+        <li class="ui-widget-content">Course 5</li>
+        <li class="ui-widget-content">Course 6</li>
+        <li class="ui-widget-content">Course 7</li>
+    </ul>
+    <p class="selectedoption">Selected courses</p>
+    <p id="select" class="selectedoption"></p>
+</body>
+</html>

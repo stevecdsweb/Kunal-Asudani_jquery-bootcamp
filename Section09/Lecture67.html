@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selectable</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #select-1 .ui-selecting {background:#0FF;}
+        #select-1 .ui-selected {background:#0F0; color:#F00;}
+        #select-1 {list-style-type:none; width:100px; margin:0px;}
+        #select-1 li {margin:3px; font-size:16px; padding:0.5em; height:4px;}
+        .ui-widget-content {background:#FF0; border:#000 2px solid; color:#F00;}
+    </style>
+    <script>
+    $(function() {
+        $("#select-1").selectable();
+    });
+    </script>
+</head>
+<body>
+    <ol id="select-1">
+        <li class="ui-widget-content">course1</li>
+        <li class="ui-widget-content">course2</li>
+        <li class="ui-widget-content">course3</li>
+        <li class="ui-widget-content">course4</li>
+        <li class="ui-widget-content">course5</li>
+        <li class="ui-widget-content">course6</li>
+        <li class="ui-widget-content">course7</li>
+        <li class="ui-widget-content">course8</li>
+        <li class="ui-widget-content">course9</li>
+        <li class="ui-widget-content">course10</li>
+    </ol>
+</body>
+</html>

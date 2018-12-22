@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selectable</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #selectable-1 .ui-selecting, #selectable-2 .ui-selecting {background:#FF0;}
+        #selectable-1 .ui-selected, #selectable-2 .ui-selected {background:#F00; color:#6F3;}
+        #selectable-1, #selectable-2 {list-style-type:none; width:20%; margin:0px; padding:0px;}
+        #selectable-1 li, #selectable-2 li {margin:1px; font-size:18px; padding:0.4em; height:20px;}
+        .ui-widget-content {background:#9F6; border:#000 2px solid; color:#000;}
+    </style>
+    <script>
+    $(function() {
+        $("#selectable-1").selectable();
+        $("#selectable-1").selectable('disable');
+        $("#selectable-2").selectable();
+        $("#selectable-2").selectable("option", "distance", 1);
+    });
+    </script>
+</head>
+<body>
+    <h2>We are using disable action</h2>
+    <ol id="selectable-1">
+        <li class="ui-widget-content">Course 1</li>
+        <li class="ui-widget-content">Course 2</li>
+        <li class="ui-widget-content">Course 3</li>
+    </ol>
+    <h2>We are going to use the action option (option name, value)</h2>
+    <ol id="selectable-2">
+        <li class="ui-widget-content">Course 4</li>
+        <li class="ui-widget-content">Course 5</li>
+        <li class="ui-widget-content">Course 6</li>
+        <li class="ui-widget-content">Course 7</li>
+    </ol>
+</body>
+</html>

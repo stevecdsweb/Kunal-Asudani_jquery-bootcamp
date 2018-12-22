@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selectable</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #select-1 .ui-selecting, #select-2 .ui-selecting {background:#00F;}
+        #select-1 .ui-selected, #select-2 .ui-selected {background:#FF0; color:#F00;}
+        #select-1, #select-2 {list-style-type:none; width:20%; margin:0px; padding:0px;}
+        #select-1 li, #select-2 li {margin:2px; font-size:18px; padding:0.4em; height:18px;}
+        .ui-widget-content {background:#0F3; border:#000 1px solid; color:#F0F;}
+    </style>
+    <script>
+    $(function() {
+        $("#select-1").selectable({
+            delay:1000
+        });
+        $("#select-2").selectable({
+            distance:100
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>selection will occur after a delay of 1000ms</h1>
+    <ol id="select-1">
+        <li class="ui-widget-content">Course 1</li>
+        <li class="ui-widget-content">Course 2</li>
+        <li class="ui-widget-content">Course 3</li>
+    </ol>
+    <h1>selection will start after the mouse moves a distance of 100px</h1>
+    <ol id="select-2">
+        <li class="ui-widget-content">Course 4</li>
+        <li class="ui-widget-content">Course 5</li>
+        <li class="ui-widget-content">Course 6</li>
+    </ol>
+</body>
+</html>
