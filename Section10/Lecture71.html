@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sortable method</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #sortable-1 {background:#CCC; margin:0px; padding:0; list-style-type:none; width:28%;}
+        #sortable-1 li {padding:0.4em; margin: 0px 3px 3px 3px; height: 18px; font-size:18px;}
+        .default {background:#F00; border:3px solid; color:#0F0;}
+    </style>
+    <script>
+    $(function() {
+        $("#sortable-1").sortable();
+    });
+    </script> 
+</head>
+<body>
+    <h1>Games available are as follows</h1>
+    <ul id="sortable-1">
+        <li class="default">Cricket</li>
+        <li class="default">Tennis</li>
+        <li class="default">Chess</li>
+        <li class="default">Table Tennis</li>
+        <li class="default">Swimming</li>
+        <li class="default">Badminton</li>
+    </ul>
+</body>
+</html>

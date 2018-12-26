@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sortable method</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #sortable-1 {margin:0px; padding:0; list-style-type:none; width:30%;}
+        #sortable-1 li{padding:0.4em; margin: 0px 3px 3px 3px; height: 20px; font-size:24px;}
+        .highlight {background:#09F; border:2px solid #0F0; font-size:36px;}
+        .default {background:#F00; border:#030 2px solid; color:#F0F;}
+    </style>
+    <script>
+    $(function() {
+        $("#sortable-1").sortable({
+            placeholder:"highlight"
+        });
+    });
+    </script> 
+</head>
+<body>
+    <h3>Here is the list of players</h3>
+    <ul id="sortable-1">
+        <li class="default">Player 1</li>
+        <li class="default">Player 2</li>
+        <li class="default">Player 3</li>
+        <li class="default">Player 4</li>
+        <li class="default">Player 5</li>
+    </ul>
+</body>
+</html>

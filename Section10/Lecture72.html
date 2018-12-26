@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sortable method</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #sortable-1, #sortable-2 {margin:0px; padding:0; list-style-type:none; width:28%;}
+        #sortable-1 li, #sortable-2 li {padding:0.4em; margin: 0px 3px 3px 3px; height: 20px; font-size:18px;}
+        .default {background:#0F0; border:#006 3px solid; color:#F00;}
+    </style>
+    <script>
+    $(function() {
+        $("#sortable-1").sortable({
+            delay:200
+        });
+        $("#sortable-2").sortable({
+            distance:100
+        });
+    });
+    </script> 
+</head>
+<body>
+    <h1>Delay will be of 200ms</h1>
+    <ul id="sortable-1">
+        <li class="default">Player 1</li>
+        <li class="default">Player 2</li>
+        <li class="default">Player 3</li>
+        <li class="default">Player 4</li>
+        <li class="default">Player 5</li>
+    </ul>
+    <h1>Distance will  be of 100px</h1>
+    <ul id="sortable-2">
+        <li class="default">Player 6</li>
+        <li class="default">Player 7</li>
+        <li class="default">Player 8</li>
+        <li class="default">Player 9</li>
+        <li class="default">Player 10</li>
+    </ul>
+</body>
+</html>

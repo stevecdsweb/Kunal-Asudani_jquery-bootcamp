@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+   <title>receive, start and sort events</title> 
+   <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+   <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+   <style> 
+      #sortable-1, #sortable-2 { list-style-type: none;   
+         margin: 0; padding: 0; width: 80%; } 
+      #sortable-1 li, #sortable-2 li { margin: 0 3px 3px 3px;   
+         padding: 0.4em; padding-left: 1.5em;   
+         font-size: 17px; height: 16px; } 
+      .default { 
+         background:#096 ;
+         border: 1px solid #DDDDDD; 
+         color: red; 
+         } 
+      .first{ 
+         display: table-row-group; 
+         } 
+      .second{ 
+         float:left; 
+         width: 200px; 
+      } 
+   </style> 
+   <script> 
+      $(function() { 
+         $( "#sortable-1" ).sortable({ 
+            start: function (event, ui) { 
+               $("span#output").html ($("span#output").html ()  
+                  + "<b>start</b><br>"); 
+            }, 
+            receive : function (event, ui) 
+            { 
+               $("span#output").html ($("span#output").html ()  
+                  + "<b>receive</b><br>"); 
+            }, 
+            stop: function (event, ui) { 
+               $("span#output").html ($("span#output").html ()  
+                  + "<b>stop</b><br>"); 
+            } 
+         }); 
+         $( "#sortable-2" ).sortable({ 
+            connectWith : "#sortable-1, #sortable-2" 
+         }); 
+      }); 
+   </script> 
+</head> 
+<body> 
+   <div class="first"> 
+      <div class="second">   
+         <h3>Games</h3> 
+         <ul id="sortable-1"> 
+            <li class="default">Cricket</li>
+            <li class="default">Football</li>
+            <li class="default">Tennis</li>
+            <li class="default">Swimming</li>
+            <li class="default">Table Tennis</li>
+         </ul> 
+      </div> 
+      <div class="second"> 
+         <h3>Players</h3>   
+         <ul id="sortable-2"> 
+            <li class="default">Player 1</li>
+            <li class="default">Player 2</li>
+            <li class="default">Player 3</li>
+            <li class="default">Player 4</li>
+            <li class="default">Player 5</li>
+         </ul> 
+      </div> 
+   </div> 
+   <hr /> 
+   <span id=output></span> 
+</body> 
+</html> 
