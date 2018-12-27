@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Autocomplete method</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function(){
+            var games = [
+            "Cricket",
+            "Football",
+            "Hockey",
+            "Swimming",
+            "Tennis",
+            "Table Tennis"
+            ];
+            $("#games").autocomplete({
+            source: games
+            });
+        });
+        
+    </script>
+</head>
+
+<body>
+    <div class="ui-widget">
+        <b>Total games available</b><br>
+        <label for="games">Games</label>
+        <input id="games">
+    </div>
+</body>
+
+</html>
