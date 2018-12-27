@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accordion</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $("#accordion-1").accordion({
+                disabled: false
+            });
+            $("input").each(function () {
+                $(this).change(function () {
+                    console.log($(this).attr("value"));
+                    if ($(this).attr("value") == "disable") {
+                        $("#accordion-1").accordion("option", "disabled", true);
+                    } else {
+                        $("#accordion-1").accordion("option", "disabled", false);
+                    }
+                });
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="accordion-1">
+        <h1>Who am I?</h1>
+        <div>
+            <b>I am an udemy instructor teaching all the programming and web designing courses and I am also a
+                graphical user interface designer</b>
+        </div>
+        <h1>What I am teaching?</h1>
+        <div>
+            <p>
+                I am teaching jQuery User Interface which will help my students to be an interface designer and they
+                can earn $$$$$
+            </p>
+        </div>
+        <h3>From how many years I am teaching??</h3>
+        <div>
+            <b>I am teaching from 8 years and my nstudents are in 98 countries</b>>
+        </div>
+
+    </div>
+    <div style="margin-top: 40px">
+        <input type="radio" name="disable" value="disable" id="disableaccordion"> disable the accordion here
+        <input type="radio" name="disable" value="enable" id="disableaccordion"> enable the accordion here
+    </div>
+</body>
+
+</html>
