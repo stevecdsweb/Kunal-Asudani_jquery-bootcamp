@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>min,max and step</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+    #spin {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    #spinner-1 {
+        width: 135px;
+        height: 16px;
+    }
+    #spinner-2 {
+        width: 80px;
+        height: 40px;
+    }
+    </style>
+    <script>
+        $(function(){
+            $("#spinner-1").spinner({
+                min:-10,
+                max:10,
+            });
+            $("#spinner-2").spinner({
+                step:100,
+                min:-500,
+                max:500,
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="spin">
+        Min and max:
+        <input type="text" id="spinner-1" value="0"/>
+        <br><br>
+        Step value:
+        <input type="text" id="spinner-2" value="0"/>
+    </div>
+</body>
+</html>

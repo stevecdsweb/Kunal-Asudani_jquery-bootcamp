@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Progressbar in UI</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        .ui-widget-header {
+            background: #0F0;
+            color: #00F;
+            border: #000 4px solid;
+        }
+        #progressbar-1 {
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#progressbar-1").progressbar({
+                value:10,
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="progressbar-1"></div>
+</body>
+</html>

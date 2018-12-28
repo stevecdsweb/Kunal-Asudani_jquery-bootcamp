@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Default spinner</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+    #spin {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    #spinner-1 input {
+        width: 100px;
+        height: 60px;
+    }
+    </style>
+    <script>
+        $(function(){
+            $("#spinner-1").spinner();
+        });
+    </script>
+</head>
+<body>
+    <div id="spin">
+        <input type="text" id="spinner-1" value="0"/>
+    </div>
+</body>
+</html>

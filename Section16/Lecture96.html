@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery UI Menu</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        .ui-menu {
+            width:200px;
+            background: #9FC;
+            font-size: 24px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#menu-1").menu({
+                icons:{
+                    submenu:"ui-icon-circle-triangle-e"},
+                    position:{my:"righttop", at:"right-50 top+10"}
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul id="menu-1">
+    <li><a href="#">Cricket</a></li>
+    <li><a href="#">Football</a></li>
+    <li><a href="#">Basketball</a></li>
+    <li><a href="#">Tennis</a>
+        <ul>
+            <li><a href="#">Table Tennis</a></li>
+            <li><a href="#">Lawn Tennis</a></li>
+        </ul>
+    <li><a href="#">Swimming</a></li>
+    <li><a href="#">Chess</a></li>
+    </ul>
+</body>
+</html>

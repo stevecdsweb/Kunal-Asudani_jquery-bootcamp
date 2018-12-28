@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Actions in slider-1</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+    #slider-1, #slider-2 {
+        margin: 50px 25px 0px 25px;
+    }
+    </style>
+    <script>
+        $(function(){
+            $("#slider-1").slider({
+                orientation:"horizontal",
+            });
+            $("#slider-1").slider('disable');
+            $("#slider-2").slider({
+                orientation:"horizontal",
+                value:20,
+                slide:function(event, ui){
+                    $("#minimum").val(ui.value);
+                }
+            });
+            $("#minimum").val($("#slider-2").slider("value"));
+        });
+    </script>
+</head>
+<body>
+        <div id="slider-1"></div>
+    <p>
+    <label for="minimum">Minimum value</label>
+    <input type="text" id="minimum" style="border: 1px solid #F00; color:#0F0;">
+</p>
+    <div id="slider-2"></div>
+</body>
+</html>

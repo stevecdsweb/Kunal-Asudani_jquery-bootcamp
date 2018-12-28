@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slider options</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+    #slider-1 {
+        margin: 50px 25px 0px 25px;
+    }
+    </style>
+    <script>
+        $(function(){
+            $("#slider-1").slider({
+                range:true,
+                min:0,
+                max:50,
+                values:[30,50],
+                slide:function(event, ui){
+                    $("#size").val("$"+ui.values[0]+"-$"+ui.values[1]);
+                }
+            });
+            $("#size").val("$"+$("#slider-1").slider("values , 0")+"-$"+$("#slider-1").slider("values, 1"));
+        });
+    </script>
+</head>
+<body>
+    <p>
+    <label for="size">Size range</label>
+    <input type="text" id="size" style="border: 1px solid; color:#F00;"></p>
+    <div id="slider-1"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>actions in spinner</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+    #spinner-1 input {
+        width: 100px;
+        height: 40px;
+    }
+    </style>
+    <script>
+        $(function(){
+            $("#spinner-1").spinner();
+            $('button').button();
+            $("#stepUp-1").click(function(){
+                $("#spinner-1").spinner("stepUp");
+            });
+            $("#stepDown-1").click(function(){
+                $("#spinner-1").spinner("stepDown");
+            });
+            $("#pageUp-1").click(function(){
+                $("#spinner-1").spinner("pageUp");
+            });
+            $("#pageDown-1").click(function(){
+                $("#spinner-1").spinner("pageDown");
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="spinner-1"/><br><br>
+    <button id="stepUp-1">Give me increment</button>
+    <button id="stepDown-1">Give me decrement</button>
+    <button id="pageUp-1">Page Up</button>
+    <button id="pageDown-1">Page Down</button>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>enable and disable</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+    #spinner-1 input {
+        width: 100px;
+        height: 40px;
+    }
+    </style>
+    <script>
+        $(function(){
+            $("#spinner-1").spinner();
+            $('button').button();
+            $("#enableme").click(function(){
+                $("#spinner-1").spinner("enable");
+            });
+            $("#disableme").click(function(){
+                $("#spinner-1").spinner("disable");
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="spinner-1"/><br><br>
+    <button id="enableme">Enable me here</button>
+    <button id="disableme">Disable me here</button>
+</body>
+</html>
