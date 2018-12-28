@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>simple dialog method</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function(){
+            $("#dialog-1").dialog({
+                autoOpen:false,
+            });
+            $("#clickbox").click(function(){
+                $("#dialog-1").dialog("open")
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="dialog-1" title="jQuery">"jQuery User interface is awarded as the best tool or language for designing the attractive user interface"</div>
+    <button id="clickbox">Click here</button>
+</body>
+</html>

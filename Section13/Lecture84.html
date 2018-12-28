@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Use of icons, text and disabled</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function(){
+            $("#button-1").button({
+                icons :{primary:"ui-icon-locked"},
+                //text=true will show text as well as icon
+                text:false
+            });
+            $("#button-2").button({
+                disabled:true
+            });
+            $("#button-3").button({
+                icons:{primary:"ui-icon-gear",
+                secondary:"ui-icon-triangle"}
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="button-1">This button contains only one icon</button>
+    <button id="button-2">This button is disabled</button>
+    <button id="button-3">This button contains two icons</button>
+</body>
+</html>

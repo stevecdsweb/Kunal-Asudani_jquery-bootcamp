@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>setdate action</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function(){
+            $("#datepicker-1").datepicker();
+            //Set the date --w(weeks) -(days)
+            $("#datepicker-1").datepicker("setDate", "10w+1");
+        });
+    </script>
+</head>
+<body>
+    <p>Enter the date: <input type="text" id="datepicker-1"></p>
+</body>
+</html>

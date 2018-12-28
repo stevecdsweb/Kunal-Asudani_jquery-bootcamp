@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Different options</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function(){
+            $("#datepicker-1").datepicker({
+                //shows week of the year with 'wk' as heading
+                showWeek:true,
+                //allows you to add something to end of year
+                yearSuffix:"-CE",
+                //Animate the appearance of calendar
+                showAnim:"explode",
+                //Displays columns right to left
+                isRTL:true,
+                //Change the heading of the wk column
+                weekHeader:"weeks",
+                //Change the steps for months
+                stepMonths:2,
+                //Use element to show calendar
+                showOn:"button",
+                //Dictate text for the button
+                buttonText:"Click me for calendar",
+                //Adds dropdown to change year
+                changeYear:true,
+                //Adds dropdown to change month
+                changeMonth:true,
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Enter the date please: <input type="text" id="datepicker-1"></p>
+</body>
+</html>

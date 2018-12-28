@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>simple dialog method</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function(){
+            $("#dialog-1").dialog({
+                autoOpen:false,
+                buttons : {
+                    Close : function(){$(this).dialog("close");}
+                    },
+                title: "Scope of jQuery UI",
+                position: {
+                    my: "left center",
+                    at: "left center",
+                },
+                closeonescape: false,
+                modal: true,
+                draggable: false
+                });
+                $("#checkme").click(function(){
+                    $("#dialog-1").dialog("open");
+                });
+        });
+    </script>
+</head>
+<body>
+    <div id="dialog-1" title="Here is the title...">I am earning $70,000 by working as an user interface designer</div>
+    <button id="checkme">Please click me</button>
+</body>
+</html>

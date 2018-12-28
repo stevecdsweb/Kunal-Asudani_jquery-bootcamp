@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hide, show and height</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        .ui-widget-header, .ui-state-default, .ui-button {
+            background: #0FF; color: #F00; border: 5px solid #000; font-size: 18px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#dialog-1").dialog({
+                autoOpen:false,
+                //use show:explode or hide:slide
+                hide:"slide",
+                height:250
+            });
+            $("#checkme").click(function(){
+                $("#dialog-1").dialog("open");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="dialog-1" title="Here is the title">This is UI</div>
+    <button id="checkme">Open here</button>
+</body>
+</html>

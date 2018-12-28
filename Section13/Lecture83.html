@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Buttons in UI</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function(){
+            //set first to "button" or "buttonset" for different appearance
+            $("#button-1, #button-2, #button-3, #button-4").buttonset();
+            //set second to "buttonset" or "button" for different appearance
+            $("#button-5").button();
+        });
+    </script>
+</head>
+
+<body>
+    <button id="button-1">I am a button</button>
+    <input id="button-2" type="submit" value="submit">
+    <a id="button-3" href="">A link</a>
+    <input type="checkbox"id="button-4">
+    <label for="button-4">Enter anything
+    </label>
+    <br><br>
+    <div id="button-5">
+        <input type="checkbox" id="middle">
+        <label for="middle">Middle Button</label>
+    </div>
+</body>
+
+</html>

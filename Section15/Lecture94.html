@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>isOpen, open and close</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        .ui-widget-header, .ui-state-default, .ui-button {
+            background: #0F0; color: #F00; border: 3px solid #F0F; font-size: 24px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#open").click(function(){
+                ($("#dialog-1").dialog("isOpen") == false) ? $("#dialog-1").dialog("open") : $("#dialog-1").dialog("close");
+            });
+            $("#dialog-1").dialog({autoOpen:false});
+        });
+    </script>
+</head>
+<body>
+    <button id="open">Dialog is here</button>
+    <div id="dialog-1" title="The title">Click here for the dialog</div>
+</body>
+</html>
