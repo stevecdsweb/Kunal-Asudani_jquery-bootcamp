@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Height, collapsible and hide tabs</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #tab-1 {
+            font-size: 16px;
+        }
+        .ui-widget-header {
+            background: #0FF; border: #F00 2px solid; color: #006;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#tab-1").tabs({
+                heightStyle:"fill",
+                collapsible:true,
+                hide:"fade",
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="tab-1">
+        <ul>
+            <li><a href="#tab-2">HTML</a></li>
+            <li><a href="#tab-3">Javascript</a></li>
+            <li><a href="#tab-4">jQuery</a></li>
+        </ul>
+        <div id="tab-2">
+            <p>HTML is a hypertext markup language. It is very useful.</p>
+        </div>
+        <div id="tab-3">
+            <p>Javascript is also another imp lang and is used for validatio.</p>
+        </div>
+        <div id="tab-4">
+            <p>You are learning jquery ui..how is this course.</p>
+        </div>
+    </div>
+</body>
+</html>

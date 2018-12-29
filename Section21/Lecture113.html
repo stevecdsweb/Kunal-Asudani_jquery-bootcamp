@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Options of tooltip</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            $("#tooltip-1").tooltip({
+                content:"<b>Hello to all my students</b>",
+                track:true
+            });
+            $("#tooltip-2").tooltip({
+                disabled:true
+            });
+        });
+    </script>
+</head>
+<body>
+    <label for="name">Name please</label>
+    <input id="tooltip-1" title="Yes i am a tooltip">
+    <label for="firstname">Name please</label>
+    <input id="tooltip-2" title="sorry no tooltip">
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tooltips- Position Option</title>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        body {
+            margin-top: 100px;
+        }
+        .ui-tooltip-content::after, .ui-tooltip-content::before {
+            content: " ";
+            position: absolute;
+            border-style: solid;
+            display: block;
+        }
+        .ui-tooltip-content::before {
+        bottom: -10px;
+        border-color: #F00;
+        border-width: 10px 10px 0;
+        }
+        .ui-tooltip-content::after {
+        bottom: -8px;
+        border-color: #F00;
+        border-width: 10px 10px 0;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#tooltip-1").tooltip({
+                position : {
+                    // 1st my can be left, center, right | 2nd my can be top, center, bottom
+                    my : "center bottom",
+                    // 1st at can be left, center, right | 2nd at can be top, center, bottom
+                    at : "center+40% bottom-10",
+                    // 1st my can be flip, fit, flipfit or none
+                    collision : "none",
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <label for="firstname">Enter first name</label>
+    <input id="tooltip-1" title="Please enter your first name only">
+</body>
+</html>
