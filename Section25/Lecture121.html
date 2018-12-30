@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div data-role="page" id="first">
+        <div data-role="header">
+            <h1>Implementation of button as navigation</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>Hello this is a navigation</p>
+            <a href="#second" class="ui-btn">Go to the second page</a>
+        </div>
+        <div data-role="footer">
+            <h2>this is a footer</h2>
+        </div>
+    </div>
+    <div data-role="page" id="second">
+        <div data-role="header">
+            <h1>Implementation of button as navigation for second</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+                <p>Hello this is a navigation</p>
+                <a href="#first" class="ui-btn">Go to the first page</a>
+            </div>
+            <div data-role="footer">
+                <h2>this is a footer</h2>
+            </div>
+    </div>
+</body>
+</html>
