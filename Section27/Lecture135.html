@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>This is a transition</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <a href="#first" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#new">Left</a>
+        <a href="#second" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#new">Top</a>
+        <a href="#third" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#new">Right</a>
+        <a href="#fourth" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#new">Bottom</a>
+
+        <div data-role="popup" id="first" class="ui-content" data-arrow="l">
+            <p>representing left arrow</p>
+        </div>
+        <div data-role="popup" id="second" class="ui-content" data-arrow="t">
+            <p>representing top arrow</p>
+        </div>
+        <div data-role="popup" id="third" class="ui-content" data-arrow="r">
+            <p>representing right arrow</p>
+        </div>
+        <div data-role="popup" id="fourth" class="ui-content" data-arrow="b">
+            <p>representing bottom arrow</p>
+        </div>
+        <p>This will show you the representation of different arrows <span id="new" style="color:blue;">effects</span>.</p>
+    </div>
+    <div data-role="footer">
+        <h3>Footer</h3>
+    </div>
+</div>
+</body>
+</html>

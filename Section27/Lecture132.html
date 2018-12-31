@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div data-role="page" id="first">
+    <div data-role="header">
+        <h1>Header</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <a href="#demo" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show popup</a>
+
+        <div data-role="popup" id="demo" class="ui-content" data-dismissible="false"><!--data-dismissable(true/false)-->
+
+            <a href="" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-notext ui-btn-left">Click</a>
+            <p>This is a popup which will be closed from the right delete button</p>
+        </div>
+    </div>
+    <div data-role="footer">
+        <h3>footer</h3>
+    </div>
+</div>
+</body>
+</html>

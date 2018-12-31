@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>This is a transition</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <a href="#first" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="fade">fade effect</a>
+        <a href="#first" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="pop">pop effect</a>
+        <a href="#first" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="flip">flip effect</a>
+        <a href="#first" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="flow">flow effect</a>
+        <a href="#first" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="slide">slide effect</a>
+        <a href="#first" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="slideup">slide up effect</a>
+        <a href="#first" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="slidedown">slide down effect</a>
+        <a href="#first" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="turn">turn effect</a>
+        <a href="#first" data-rel="popup" class="ui-btn ui-btn-inline" data-transition="none">no effect</a>
+
+        <div data-role="popup" id="first" class="ui-content">
+            <p>This is a demo to several transition effects</p>
+        </div>
+    </div>
+    <div data-role="footer">
+        <h3>This is a footer</h3>
+    </div>
+</div>
+</body>
+</html>

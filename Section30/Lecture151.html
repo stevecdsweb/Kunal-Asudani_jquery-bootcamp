@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div data-role="page" id="first">
+    <div data-role="panel" id="newpanel" data-display="overlay">
+        <h2>Discount information</h2>
+        <p>This is an imp message to all the users that all items are 45% OFF for next 2 weeks</p>
+        <a href="#first" data-rel="close" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left">Close panel from here</a>
+    </div>
+    <div data-role="panel" id="newpanel1" data-display="push">
+            <h2>Discount information</h2>
+            <p>This is an imp message to all the users that all items are 45% OFF for next 2 weeks</p>
+            <a href="#first" data-rel="close" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left">Close panel from here</a>
+        </div>
+        <div data-role="panel" id="newpanel2" data-display="reveal">
+                <h2>Discount information</h2>
+                <p>This is an imp message to all the users that all items are 45% OFF for next 2 weeks</p>
+                <a href="#first" data-rel="close" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left">Close panel from here</a>
+            </div>
+    <div data-role="header">
+        <h1>This is page header</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <a href="#newpanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Overlay</a>
+        <a href="#newpanel1" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Push</a>
+        <a href="#newpanel2" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Reveal</a>
+    </div>
+    <div data-role="footer">
+        <h3>This is page footer</h3>
+    </div>
+</div>
+</body>
+</html>
