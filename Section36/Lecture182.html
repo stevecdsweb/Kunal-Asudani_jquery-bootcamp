@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+    <style>
+    th {
+        border-bottom: 2px solid #F00;
+    }
+    tr:nth-child(even) {
+        background: #666;
+    }
+    </style>
+</head>
+<body>
+<div data-role="page" id="first">
+    <div data-role="header">
+        <h1>Tables</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <form>
+            <input id="new" data-type="search" placeholder="Search for any student...!!!">
+        </form>
+        <table data-role="table" data-role="columntoggle" class="ui-responsive" data-filter="true" data-input="#new">
+            <thead>
+                <tr>
+                    <th><data-priority="6">Student Id</th>
+                    <th>Student Name</th>
+                    <th><data-priority="1">Contact no</th>
+                    <th><data-priority="2">Roll number</th>
+                    <th><data-priority="4">PostalCode</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Albert</td>
+                    <td>45454545</td>
+                    <td>34</td>
+                    <td>12209</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bally</td>
+                    <td>454467545</td>
+                    <td>44</td>
+                    <td>1509</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Tony</td>
+                    <td>786545</td>
+                    <td>14</td>
+                    <td>17865</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div data-role="footer">
+        <h5>This is footer</h5>
+    </div>
+</div>
+</body>
+</html>

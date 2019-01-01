@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Popup list</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <a href="#new" data-rel="popup" class="ui-btn ui-btn-inline ui-icon-gear ui-btn-icon-right">Click here to select games</a>
+        <div data-role="popup" id="new">
+            <ul data-role="listview" data-inset="true" style="min-width: 280px;">
+                <li><a href="#">Cricket</a></li>
+                <li><a href="#">Football</a></li>
+                <li><a href="#">Tennis</a></li>
+                <li><a href="#">Baseball</a></li>
+                <li><a href="#">Hockey</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="footer">
+        <h3>Popup ends</h3>
+    </div>
+</div>
+</body>
+</html>

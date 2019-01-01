@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+    <style>
+    tr {
+        border: 2px solid #F00;
+    } 
+    tr:nth-child(even) {
+        background: #CCC;
+    }
+    </style>
+</head>
+<body>
+<div data-role="page" id="first">
+    <div data-role="header">
+        <h2>Column toggle table</h2>
+    </div>
+    <div data-role="main" class="ui-content">
+        <table data-role="table" data-role="columntoggle" class="ui-responsive ui-shadow" id="new">
+            <thead>
+                <tr>
+                    <th><data-priority="4">Student Id</th>
+                    <th>Student Name</th>
+                    <th><data-priority="1">City</th>
+                    <th><data-priority="2">Postal code</th>
+                    <th><data-priority="3">Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Albert</td>
+                    <td>Berlin</td>
+                    <td>1289</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>John</td>
+                    <td>Berlin</td>
+                    <td>1289</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Peter</td>
+                    <td>London</td>
+                    <td>1284</td>
+                    <td>England</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Willie</td>
+                    <td>Berlin</td>
+                    <td>1289</td>
+                    <td>Germany</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div data-role="footer">
+        <h5>This is footer</h5>
+    </div>
+</div>
+</body>
+</html>

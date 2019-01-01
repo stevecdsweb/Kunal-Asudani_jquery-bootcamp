@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>collapsible list</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <a href="#mypopup" data-rel="popup" class="ui-btn ui-btn-inline ui-icon-gear ui-btn-icon-left">Choose</a>
+        <div data-role="popup" id="mypopup" class="ui-content">
+            <h2>Choose here</h2>
+            <div data-role="collapsible-set" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" style="min-width: 290px;">
+                <div data-role="collapsible">
+                    <h3>A</h3>
+                    <ul data-role="listview">
+                        <li><a href="#">Akhil</a></li>
+                        <li><a href="#">Allen</a></li>
+                        <li><a href="#">Alol</a></li>
+                    </ul>
+                </div>
+                <div data-role="collapsible">
+                    <h3>B</h3>
+                    <ul data-role="listview">
+                        <li><a href="#">Bill</a></li>
+                        <li><a href="#">Bob</a></li>
+                        <li><a href="#">Buddy</a></li>
+                    </ul>
+                </div>
+                <div data-role="collapsible">
+                    <h3>C</h3>
+                    <ul data-role="listview">
+                        <li><a href="#">Clarice</a></li>
+                        <li><a href="#">Carl</a></li>
+                        <li><a href="#">Colt</a></li>
+                    </ul>
+                </div>
+                <div data-role="collapsible">
+                    <h3>D</h3>
+                    <ul data-role="listview">
+                        <li><a href="#">Darcy</a></li>
+                        <li><a href="#">Dillon</a></li>
+                        <li><a href="#">Drew</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer">
+        <h3>Collapsible ends</h3>
+    </div>
+</div>
+</body>
+</html>
